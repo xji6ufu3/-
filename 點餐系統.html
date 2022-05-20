@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="zh-TW">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+ 
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+ 
+    <title>點餐系統</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1><?= title;  ?></h1>
+ 
+       
+      <style>
+        /* 圖片來源：https://hackmd.io/@ugm/SJ66fUfiU */
+        /* // Extra small devices (portrait phones, less than 576px) */
+        @media (max-width: 575.98px) {          
+          .card-columns{
+            column-count: 1;
+          }
+        }
+        /* // Small devices (landscape phones, 576px and up) */
+        @media (min-width: 576px) and (max-width: 767.98px) {         
+          .card-columns{
+            column-count: 2;
+          }
+        }
+        /* // Medium devices (tablets, 768px and up) */
+        @media (min-width: 768px) and (max-width: 991.98px) {         
+          .card-columns{
+            column-count: 3;
+          }
+        }
+        /* // Large devices (desktops, 992px and up) */
+        @media (min-width: 992px) and (max-width: 1199.98px) {         
+          .card-columns{
+            column-count: 3;
+          }
+        }
+        /* // Extra large devices (large desktops, 1200px and up) */
+        @media (min-width: 1200px) {         
+          .card-columns{
+            column-count: 3;
+          }
+        }
+      </style> 
+ 
+      <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item">
+          <a class="nav-link active" id="nav_0" data-toggle="tab" href="#content_0" role="tab" aria-controls="content_0" aria-selected="true">炸物類</a>
+        </li>
+ 
+        <li class="nav-item">
+          <a class="nav-link" id="nav_1" data-toggle="tab" href="#content_1" role="tab" aria-controls="content_1" aria-selected="false">茶凍類</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="nav_2" data-toggle="tab" href="#contact_2" role="tab" aria-controls="contact_2" aria-selected="false">盛大套餐</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="nav_3" data-toggle="tab" href="#contact_3" role="tab" aria-controls="contact_3" aria-selected="false">清爽無負擔</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="nav_4" data-toggle="tab" href="#contact_4" role="tab" aria-controls="contact_4" aria-selected="false">全都來一份</a>
+        </li>
+		<li class="nav-item">
+          <a class="nav-link" id="nav_5" data-toggle="tab" href="#contact_5" role="tab" aria-controls="contact_5" aria-selected="false">結帳區</a>
+        </li>
+      </ul>
+       
+      <div class="tab-content" id="myTabContent">
+         
+        <div class="tab-pane fade show active" id="content_0" role="tabpanel" aria-labelledby="nav_0">          
+            
+          <div class="mt-5">      
+            <h1 class="mt-3 mb-3 text-center">炸物類</h1>
+            <div class="card-columns">
+               
+              <div class="card">
+                <img onclick="ck(A)" id="A" class="card-img-top" src="https://images.unsplash.com/photo-1518013431117-eb1465fa5752?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="A.高溫殺菌粗土豆條(粗薯條)" width="354.66" height="236.44">
+                <div class="card-body">
+                  <h4 class="card-title text-center mb-0">A.高溫殺菌粗土豆條<p></p>(粗薯條)<p></p>價格：35元/包</h4>
+                </div>
+              </div>
+              <div class="card">
+                <img onclick="ck(D)" id="D" class="card-img-top" src="https://cdn.cybassets.com/s/files/11378/ckeditor/pictures/content_43782849-187d-465e-89c5-fcd4a166f1d5.jpg" alt="D.頭足綱墨魚丸(花枝丸)" height="236.44" width="354.66">
+                <div class="card-body">
+                  <h4 class="card-title text-center mb-0">D.頭足綱墨魚丸<p></p>(花枝丸)<p></p>價格：20元/3丸</h4>
+                </div>
+              </div>  
+			  <div class="card">
+                <img onclick="ck(B)" id="B" class="card-img-top" src="https://images.unsplash.com/photo-1541592391523-5ae8c2c88d10?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="B.脂肪酸佐食用塊莖(細薯條)" width="354.66" height="236.44">
+                <div class="card-body">
+                  <h4 class="card-title text-center mb-0">B.脂肪酸佐食用塊莖<p></p>(細薯條)<p></p>價格：30元/包</h4>
+                </div>
+              </div> 
+			  <div class="card">
+                <img onclick="ck(E)" id="E" class="card-img-top" src="https://y3.yooho.com.tw/images/201905/goods_img/5208_G_1557267377768.jpg" alt="E.大豆分離蛋白鏈(甜不辣)" height="236.44" width="354.66">
+                <div class="card-body">
+                  <h4 class="card-title text-center mb-0">E.大豆分離蛋白鏈<p></p>(甜不辣)<p></p>價格：25元/包</h4>
+                </div>
+              </div>            
+			  <div class="card">
+                <img onclick="ck(C)" id="C" class="card-img-top" src="https://tokyo-kitchen.icook.network/uploads/recipe/cover/279935/28d2a7f728c3fdd0.jpg" alt="C.鳥綱雞形目屍塊(鹽酥雞)" height="236.44" width="354.66">
+                <div class="card-body">
+                  <h4 class="card-title text-center mb-0">C.鳥綱雞形目屍塊<p></p>(鹽酥雞)<p></p>價格：40元/包</h4>
+                </div>
+              </div>
+              <!--
+              <div class="card">
+                <img class="card-img-top" src="https://picsum.photos/200/300?random=6" alt="商品6">
+                <div class="card-body">
+                  <h4 class="card-title text-center mb-0">商品6<p></p>價格:200元</h4>
+                </div>
+              </div>     
+               
+              <div class="card">
+                <img class="card-img-top" src="https://picsum.photos/200/300?random=7" alt="商品7">
+                <div class="card-body">
+                  <h4 class="card-title text-center mb-0">商品7<p></p>價格:200元</h4>
+                </div>
+              </div>  
+              <div class="card">
+                <img class="card-img-top" src="https://picsum.photos/200/300?random=8" alt="商品8">
+                <div class="card-body">
+                  <h4 class="card-title text-center mb-0">商品8<p></p>價格:200元</h4>
+                </div>
+              </div>          
+              <div class="card">
+                <img class="card-img-top" src="https://picsum.photos/200/300?random=9" alt="商品9">
+                <div class="card-body">
+                  <h4 class="card-title text-center mb-0">商品9<p></p>價格:200元</h4>
+                </div>
+              </div>  
+			  -->
+               
+            </div>
+          </div>
+ 
+        </div>
+         
+        <div class="tab-pane fade" id="content_1" role="tabpanel" aria-labelledby="nav_1">
+           
+          <!-- 瀑布流 -->
+          <div class="mt-5">      
+            <h1 class="mt-3 mb-3 text-center">茶凍類</h1>
+            <div class="card-columns">
+               
+              <div class="card">
+                <img onclick="ck(F)" id="F" class="card-img-top" src="http://ali.xinshipu.cn/20160619_1/original/1466348495118.jpg" alt="F.乳糖膠原蛋白(鮮奶酪)" height="250" width="354.66">
+                <div class="card-body">
+                  <h4 class="card-title text-center mb-0">F.乳糖膠原蛋白<p></p>(鮮奶酪)<p></p>價格：35元/盒</h4>
+                </div>
+              </div>  
+              <div class="card">
+                <img onclick="ck(G)" id="G" class="card-img-top" src="https://lh3.googleusercontent.com/proxy/Z4M9mxiLEWfA3qmdBoKKmpSfTQEDzOF7UVKThwgYuRozuc-EfLvJpGw3a3iV3DcFCQ059S8l_-JpwpSKYyES-9AM7oucK1HqSp6E6vKdwjjJRlaGbWW1z1THWL3P9gVH" alt="G.茶紅素胜肽(紅茶凍)" height="250" width="354.66">
+                <div class="card-body">
+                  <h4 class="card-title text-center mb-0">G.茶紅素胜肽<p></p>(紅茶凍)<p></p>價格：25元/盒</h4>
+                </div>
+              </div>  
+		      <!--
+              <div class="card">
+                <img class="card-img-top" src="https://picsum.photos/200/300?random=3" alt="商品3">
+                <div class="card-body">
+                  <h4 class="card-title text-center mb-0">商品3<p></p>價格:200元</h4>
+                </div>
+              </div>
+              <div class="card">
+                <img class="card-img-top" src="https://picsum.photos/200/300?random=4" alt="商品4">
+                <div class="card-body">
+                  <h4 class="card-title text-center mb-0">商品4<p></p>價格:200元</h4>
+                </div>
+              </div>  
+              <div class="card">
+                <img class="card-img-top" src="https://picsum.photos/200/300?random=5" alt="商品5">
+                <div class="card-body">
+                  <h4 class="card-title text-center mb-0">商品5<p></p>價格:200元</h4>
+                </div>
+              </div> 
+               
+              <div class="card">
+                <img class="card-img-top" src="https://picsum.photos/200/300?random=6" alt="商品6">
+                <div class="card-body">
+                  <h4 class="card-title text-center mb-0">商品6<p></p>價格:200元</h4>
+                </div>
+              </div>     
+               
+              <div class="card">
+                <img class="card-img-top" src="https://picsum.photos/200/300?random=7" alt="商品7">
+                <div class="card-body">
+                  <h4 class="card-title text-center mb-0">商品7<p></p>價格:200元</h4>
+                </div>
+              </div>  
+              <div class="card">
+                <img class="card-img-top" src="https://picsum.photos/200/300?random=8" alt="商品8">
+                <div class="card-body">
+                  <h4 class="card-title text-center mb-0">商品8<p></p>價格:200元</h4>
+                </div>
+              </div>          
+              <div class="card">
+                <img class="card-img-top" src="https://picsum.photos/200/300?random=9" alt="商品9">
+                <div class="card-body">
+                  <h4 class="card-title text-center mb-0">商品9<p></p>價格:200元</h4>
+                </div>
+              </div>       
+              --> 
+            </div>
+          </div>
+ 
+        </div>
+        <div class="tab-pane fade" id="contact_2" role="tabpanel" aria-labelledby="nav_2">
+          <div class="mt-5">      
+            <h1 class="mt-3 mb-3 text-center">盛大套餐</h1>
+            <div class="card-columns">
+              <div  class="card">
+                <img onclick="ck(H)" id="H" class="card-img-top" src="https://tokyo-kitchen.icook.network/uploads/recipe/cover/279935/28d2a7f728c3fdd0.jpg" alt="C.鳥綱雞形目屍塊(鹽酥雞)" height="236.44" width="354.66">
+				<p></p>
+				<img class="card-img-top" src="https://y3.yooho.com.tw/images/201905/goods_img/5208_G_1557267377768.jpg" alt="E.大豆分離蛋白鏈(甜不辣)" height="236.44" width="354.66">
+                <div class="card-body">
+                  <h4 class="card-title text-center mb-0">H.盛大套餐<p></p>( C + E )<p></p>價格：60元</h4>
+                </div>
+              </div>  
+              <div class="card">
+                <img onclick="ck(I)" id="I" class="card-img-top" src="https://images.unsplash.com/photo-1518013431117-eb1465fa5752?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="A.高溫殺菌粗土豆條(粗薯條)" width="354.66" height="236.44">
+				<p></p>
+				<img class="card-img-top" src="https://tokyo-kitchen.icook.network/uploads/recipe/cover/279935/28d2a7f728c3fdd0.jpg" alt="C.鳥綱雞形目屍塊(鹽酥雞)" height="236.44" width="354.66">
+				<p></p>
+				<img class="card-img-top" src="https://cdn.cybassets.com/s/files/11378/ckeditor/pictures/content_43782849-187d-465e-89c5-fcd4a166f1d5.jpg" alt="D.頭足綱墨魚丸(花枝丸)" height="236.44" width="354.66">
+                <div class="card-body">
+                  <h4 class="card-title text-center mb-0">I.極盛大套餐<p></p>( A + C + D )<p></p>價格：90元</h4>
+                </div>
+              </div>
+			  </div>
+			  </div>
+		</div>
+        <div class="tab-pane fade" id="contact_3" role="tabpanel" aria-labelledby="nav_3">
+          <div class="mt-5">      
+            <h1 class="mt-3 mb-3 text-center">清爽無負擔</h1>
+            <div class="card-columns">
+              <div class="card">
+                <img onclick="ck(J)" id="J" class="card-img-top" src="https://cdn.cybassets.com/s/files/11378/ckeditor/pictures/content_43782849-187d-465e-89c5-fcd4a166f1d5.jpg" alt="D.頭足綱墨魚丸(花枝丸)" height="236.44" width="354.66">
+				<p></p>
+				<img class="card-img-top" src="http://ali.xinshipu.cn/20160619_1/original/1466348495118.jpg" alt="F.乳糖膠原蛋白(鮮奶酪)" height="250" width="354.66">
+                <div class="card-body">
+                  <h4 class="card-title text-center mb-0">J.清爽第一式<p></p>( D + F )<p></p>價格：50元</h4>
+                </div>
+              </div>  
+              <div class="card">
+                <img onclick="ck(K)" id="K" class="card-img-top" src="https://images.unsplash.com/photo-1541592391523-5ae8c2c88d10?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="B.脂肪酸佐食用塊莖(細薯條)" width="354.66" height="236.44">
+				<p></p>
+				<img class="card-img-top" src="https://lh3.googleusercontent.com/proxy/Z4M9mxiLEWfA3qmdBoKKmpSfTQEDzOF7UVKThwgYuRozuc-EfLvJpGw3a3iV3DcFCQ059S8l_-JpwpSKYyES-9AM7oucK1HqSp6E6vKdwjjJRlaGbWW1z1THWL3P9gVH" alt="G.茶紅素胜肽(紅茶凍)" height="250" width="354.66">
+                <div class="card-body">
+                  <h4 class="card-title text-center mb-0">K.清爽第二式<p></p>( B + G )<p></p>價格：90元</h4>
+                </div>
+				</div>
+			  </div>
+			</div>
+        </div>
+        <div class="tab-pane fade" id="contact_4" role="tabpanel" aria-labelledby="nav_4">
+          <div class="mt-5">      
+            <h1 class="mt-3 mb-3 text-center">全都來一份</h1>
+            <div class="card-columns">
+              <div class="card">
+			    <img onclick="ck(L)" id="L" class="card-img-top" src="https://images.unsplash.com/photo-1541592391523-5ae8c2c88d10?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="B.脂肪酸佐食用塊莖(細薯條)" width="354.66" height="236.44">
+			    <p></p>
+                <img class="card-img-top" src="https://tokyo-kitchen.icook.network/uploads/recipe/cover/279935/28d2a7f728c3fdd0.jpg" alt="C.鳥綱雞形目屍塊(鹽酥雞)" height="236.44" width="354.66">
+				<p></p>
+				<img class="card-img-top" src="https://cdn.cybassets.com/s/files/11378/ckeditor/pictures/content_43782849-187d-465e-89c5-fcd4a166f1d5.jpg" alt="D.頭足綱墨魚丸(花枝丸)" height="236.44" width="354.66">
+				<p></p>
+				<img class="card-img-top" src="https://y3.yooho.com.tw/images/201905/goods_img/5208_G_1557267377768.jpg" alt="E.大豆分離蛋白鏈(甜不辣)" height="236.44" width="354.66">
+                <div class="card-body">
+                  <h4 class="card-title text-center mb-0">L.大滿足<p></p>( B + C + D + E )<p></p>價格：100元</h4>
+                </div>
+              </div>  
+              </div>
+              </div>
+			</div>
+		<div class="tab-pane fade" id="contact_5" role="tabpanel" aria-labelledby="nav_5">
+		  <div class="mt-5">      
+		  <h1 class="mt-3 mb-3 text-center">結帳區</h1><br>
+		  <div id="h1">
+		  <h1>購物清單</h1>
+		  <script>
+		    var time = 0;
+			//var price[12]={35,30,40,20,25,35,25,60,90,50,90,100};
+			var sum=0;
+		    function ck(str)
+			{
+				var a = document.getElementById("h1");
+				time += 1;
+				a.innerHTML += "<br><h2>" + time + ".  " + str.id + "</h2>";
+				//sum += price[str.id-'A'];
+			}
+			/*function total()
+			{
+				var a = document.getElementById("h1");
+				a.innerHTML += "<br><h1>Total : " + total + "</h1>";
+			}*/
+		  </script>
+		  </div>
+		 </div>
+        </div>	
+     </div>		
+		
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+  </body>
+</html>
